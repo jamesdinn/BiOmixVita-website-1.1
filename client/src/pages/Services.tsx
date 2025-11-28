@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import { Dna, Microscope, Brain, ArrowRight, Server, BarChart3, Workflow, ChevronDown, ChevronRight } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Link } from 'wouter';
 
 const Services = () => {
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
+  const [showOmicsModal, setShowOmicsModal] = useState(false);
 
   const omicsCategories = {
     genomics: {
@@ -208,39 +210,27 @@ const Services = () => {
           <div className="grid grid-cols-3 gap-8 max-w-6xl mx-auto">
             
             {/* Core OMICS Analysis */}
-            <div className="group relative bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg overflow-hidden transition-all duration-300 hover:shadow-xl">
-              <div className="p-6">
-                <div className="text-center mb-6">
+            <div 
+              className="group relative h-64 bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-xl"
+              onClick={() => setShowOmicsModal(true)}
+            >
+              <div className="absolute inset-0 flex items-center justify-center group-hover:opacity-0 transition-opacity duration-300">
+                <div className="text-center">
                   <Dna className="h-16 w-16 text-primary mx-auto mb-4" />
                   <h3 className="text-2xl font-bold text-gray-900">Core OMICS Analysis</h3>
                 </div>
-                
-                <div className="space-y-2">
-                  {Object.entries(omicsCategories).map(([key, category]) => (
-                    <div key={key} className="border border-gray-200 rounded-lg bg-white/50">
-                      <button
-                        onClick={() => toggleCategory(key)}
-                        className="w-full px-4 py-3 text-left flex items-center justify-between hover:bg-white/70 transition-colors rounded-lg"
-                      >
-                        <span className="font-semibold text-gray-800">*{category.title}</span>
-                        {expandedCategory === key ? (
-                          <ChevronDown className="h-4 w-4 text-gray-600" />
-                        ) : (
-                          <ChevronRight className="h-4 w-4 text-gray-600" />
-                        )}
-                      </button>
-                      
-                      {expandedCategory === key && (
-                        <div className="px-4 pb-3 space-y-1">
-                          {category.services.map((service, index) => (
-                            <div key={index} className="text-sm text-gray-700 pl-4">
-                              • {service}
-                            </div>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  ))}
+              </div>
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6">
+                <div className="text-center">
+                  <p className="text-gray-700 leading-relaxed text-base font-bold mb-3">Click to view all OMICS categories:</p>
+                  <ul className="text-gray-700 leading-relaxed text-sm text-left space-y-1">
+                    <li>• Genomics</li>
+                    <li>• Metagenomics</li>
+                    <li>• Transcriptomics</li>
+                    <li>• Epigenomics</li>
+                    <li>• Proteomics</li>
+                    <li>• Metabolomics</li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -344,6 +334,44 @@ const Services = () => {
         </div>
       </section>
 
+      {/* Core OMICS Modal */}
+      <Dialog open={showOmicsModal} onOpenChange={setShowOmicsModal}>
+        <DialogContent className="max-w-3xl max-h-[80vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle className="text-3xl font-bold text-gray-900 mb-4 flex items-center">
+              <Dna className="h-10 w-10 text-primary mr-3" />
+              Core OMICS Analysis
+            </DialogTitle>
+          </DialogHeader>
+          <div className="space-y-4 mt-4">
+            {Object.entries(omicsCategories).map(([key, category]) => (
+              <div key={key} className="border border-gray-200 rounded-lg bg-gradient-to-br from-blue-50 to-blue-100">
+                <button
+                  onClick={() => toggleCategory(key)}
+                  className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-blue-100 transition-colors rounded-lg"
+                >
+                  <span className="font-bold text-gray-900 text-lg">{category.title}</span>
+                  {expandedCategory === key ? (
+                    <ChevronDown className="h-5 w-5 text-gray-700" />
+                  ) : (
+                    <ChevronRight className="h-5 w-5 text-gray-700" />
+                  )}
+                </button>
+                
+                {expandedCategory === key && (
+                  <div className="px-6 pb-4 space-y-2 bg-white rounded-b-lg">
+                    {category.services.map((service, index) => (
+                      <div key={index} className="text-base text-gray-700 pl-4 py-1">
+                        • {service}
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </DialogContent>
+      </Dialog>
 
     </div>
   );
