@@ -4,7 +4,7 @@ import { Linkedin, Mail } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer style={{backgroundColor: '#8295b9'}} className="text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo and Description */}
@@ -14,7 +14,7 @@ const Footer = () => {
                 <img src="/biomixvitalogov3.png" alt="BiOmixVita Logo" className="h-10" />
               </a>
             </Link>
-            <p className="text-gray-400 text-sm mb-4">
+            <p className="text-gray-100 text-sm mb-4">
               OMICS & AI solutions for healthier & more sustainable futures
             </p>
             <div className="flex space-x-4">
@@ -22,14 +22,14 @@ const Footer = () => {
                 href="https://www.linkedin.com/company/biomixvita"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-gray-100 hover:text-white transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="h-5 w-5" />
               </a>
               <a
                 href="mailto:contact@biomixvita.com"
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-gray-100 hover:text-white transition-colors"
                 aria-label="Email"
               >
                 <Mail className="h-5 w-5" />
@@ -94,8 +94,8 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-          <p className="text-gray-400 text-sm">
+        <div className="border-t border-gray-300 mt-8 pt-8 text-center">
+          <p className="text-gray-100 text-sm">
             © {new Date().getFullYear()} BiOmixVita. All rights reserved.
           </p>
         </div>
