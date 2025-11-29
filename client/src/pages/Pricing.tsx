@@ -126,7 +126,7 @@ export default function Pricing() {
             <Link href="/contact">
               <a>
                 <Button size="lg">
-                  Request a Quote
+                  Let's Connect
                 </Button>
               </a>
             </Link>
