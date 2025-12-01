@@ -10,7 +10,7 @@ const Insights = () => {
       id: 1,
       title: "Bioinformatics Careers at a Crossroads: Automation vs. Human Insight",
       keywords: ["Bioinformatics", "AI", "Automation", "Expert Analysis", "No-Code Platforms"],
-      date: "November 21, 2025",
+      date: "December 1, 2025",
       author: "BiOmixVita Team",
       readTime: "6 min read",
       content: {
