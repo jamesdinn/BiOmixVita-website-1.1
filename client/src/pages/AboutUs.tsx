@@ -47,11 +47,11 @@ const AboutUs = () => {
             <h3 className="text-2xl font-semibold text-gray-900 mb-6 text-center">BiOmixVita Lead</h3>
             <div className="grid md:grid-cols-3 gap-8 items-center">
               <div className="text-center">
-                <div className="w-48 h-48 mx-auto mb-4 overflow-hidden rounded-full">
+                <div className="w-64 h-64 mx-auto mb-4 overflow-hidden rounded-full">
                   <img 
                     src="/photoprso2.png" 
                     alt="Chamseddine KIFAGI" 
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-top scale-110"
                   />
                 </div>
                 <div className="flex justify-center space-x-4">
