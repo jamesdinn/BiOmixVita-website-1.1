@@ -210,13 +210,14 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg p-8 shadow-lg">
-            <div className="flex flex-col md:flex-row gap-6 items-center">
+          <div className="rounded-lg shadow-lg relative overflow-hidden" style={{backgroundImage: 'url(/ai-dna-background.png)', backgroundSize: 'cover', backgroundPosition: 'center'}}>
+            <div className="absolute inset-0 bg-black/40"></div>
+            <div className="relative z-10 p-8 flex flex-col md:flex-row gap-6 items-center">
               <div className="flex-1">
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                <h3 className="text-2xl font-bold text-white mb-3 drop-shadow-lg">
                   Bioinformatics Careers at a Crossroads: Automation vs. Human Insight
                 </h3>
-                <p className="text-gray-700 mb-4">
+                <p className="text-gray-100 mb-4 drop-shadow-md">
                   Explore how BiOmixVita's hybrid approach combines AI-driven automation with 
                   expert scientific insight to deliver superior bioinformatics solutions.
                 </p>
