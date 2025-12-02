@@ -22,7 +22,7 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/services">
                   <a>
-                    <Button size="lg" className="w-full sm:w-auto">
+                    <Button size="lg" className="w-full sm:w-auto" style={{backgroundColor: '#2a5fa0'}}>
                       Explore Our Services
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </Button>
