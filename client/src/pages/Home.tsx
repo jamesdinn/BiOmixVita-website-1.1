@@ -241,31 +241,60 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-[#4169E1] text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Unlock the Potential of Your Biological Data?
-          </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Let's discuss how BiOmixVita can help accelerate your research and deliver 
-            actionable insights from your OMICS data.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact">
-              <a>
-                <Button size="lg" variant="secondary" className="w-full sm:w-auto">
-                  Get Started
-                </Button>
-              </a>
-            </Link>
-            <Link href="/about">
-              <a>
-                <Button size="lg" variant="outline" className="w-full sm:w-auto bg-transparent text-white border-white hover:bg-white hover:text-[#4169E1]">
-                  Learn More About Us
-                </Button>
-              </a>
-            </Link>
+      {/* Let's Connect Section */}
+      <section className="py-20 bg-[#7FA8B8] text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Let's Connect
+            </h2>
+            <h3 className="text-2xl md:text-3xl font-semibold mb-4">
+              Ready to Transform Your Research?
+            </h3>
+            <p className="text-lg text-white/90 max-w-3xl mx-auto">
+              Get in touch for a free initial consultation and discover how our OMICS & AI solutions can revolutionize your projects and accelerate your research outcomes.
+            </p>
+          </div>
+          
+          {/* Quick Contact Form */}
+          <div className="max-w-3xl mx-auto bg-white/10 backdrop-blur-sm rounded-lg p-8">
+            <h4 className="text-xl font-semibold mb-6 text-white">Quick Contact</h4>
+            <form className="space-y-4">
+              <div>
+                <input 
+                  type="text" 
+                  placeholder="Your Name" 
+                  className="w-full px-4 py-3 rounded-lg bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                />
+              </div>
+              <div>
+                <input 
+                  type="email" 
+                  placeholder="Email Address" 
+                  className="w-full px-4 py-3 rounded-lg bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                />
+              </div>
+              <div>
+                <input 
+                  type="tel" 
+                  placeholder="Phone Number" 
+                  className="w-full px-4 py-3 rounded-lg bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                />
+              </div>
+              <div>
+                <textarea 
+                  rows={4} 
+                  placeholder="Tell us about your project..." 
+                  className="w-full px-4 py-3 rounded-lg bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-400 resize-none"
+                ></textarea>
+              </div>
+              <button 
+                type="submit" 
+                className="w-full py-3 px-6 bg-[#367cc1] hover:bg-[#2a5fa0] text-white font-semibold rounded-lg transition-colors"
+              >
+                Send Message
+              </button>
+            </form>
           </div>
         </div>
       </section>

@@ -59,8 +59,9 @@ const Insights = () => {
     return (
       <div className="bg-white">
         {/* Hero Section */}
-        <div className="bg-primary text-white">
-          <div className="mx-auto max-w-4xl px-6 py-16 lg:px-8">
+        <div className="relative overflow-hidden text-white" style={{backgroundImage: 'url(/ai-dna-background.png)', backgroundSize: 'cover', backgroundPosition: 'center'}}>
+          <div className="absolute inset-0 bg-black/40"></div>
+          <div className="relative z-10 mx-auto max-w-4xl px-6 py-16 lg:px-8">
             <div className="text-center">
               <button 
                 onClick={() => setSelectedArticle(null)}
