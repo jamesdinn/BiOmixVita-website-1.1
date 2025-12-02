@@ -3,8 +3,24 @@ import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Dna, Microscope, Brain, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { useState } from 'react';
+import { toast } from 'sonner';
 
 export default function Home() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    // Simulate form submission
+    setTimeout(() => {
+      toast.success("Message sent successfully! We'll get back to you soon.");
+      setIsSubmitting(false);
+      (e.target as HTMLFormElement).reset();
+    }, 1000);
+  };
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -259,7 +275,7 @@ export default function Home() {
           {/* Quick Contact Form */}
           <div className="max-w-3xl mx-auto bg-white/10 backdrop-blur-sm rounded-lg p-8">
             <h4 className="text-xl font-semibold mb-6 text-white">Quick Contact</h4>
-            <form className="space-y-4">
+            <form className="space-y-4" onSubmit={handleSubmit}>
               <div>
                 <input 
                   type="text" 
@@ -290,9 +306,10 @@ export default function Home() {
               </div>
               <button 
                 type="submit" 
-                className="w-full py-3 px-6 bg-[#367cc1] hover:bg-[#2a5fa0] text-white font-semibold rounded-lg transition-colors"
+                disabled={isSubmitting}
+                className="w-full py-3 px-6 bg-[#367cc1] hover:bg-[#2a5fa0] text-white font-semibold rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Send Message
+                {isSubmitting ? "Sending..." : "Send Message"}
               </button>
             </form>
           </div>

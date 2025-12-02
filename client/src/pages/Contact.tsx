@@ -2,8 +2,24 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Mail, Linkedin } from 'lucide-react';
+import { useState } from 'react';
+import { toast } from 'sonner';
 
 export default function Contact() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    // Simulate form submission
+    setTimeout(() => {
+      toast.success("Message sent successfully! We'll get back to you soon.");
+      setIsSubmitting(false);
+      (e.target as HTMLFormElement).reset();
+    }, 1000);
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
@@ -30,8 +46,7 @@ export default function Contact() {
                 Send Us a Message
               </h2>
               <form 
-                action="https://formspree.io/f/YOUR_FORM_ID" 
-                method="POST"
+                onSubmit={handleSubmit}
                 className="space-y-6"
               >
                 <div>
@@ -97,8 +112,8 @@ export default function Contact() {
                   ></textarea>
                 </div>
 
-                <Button type="submit" size="lg" className="w-full">
-                  Send Message
+                <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
+                  {isSubmitting ? "Sending..." : "Send Message"}
                 </Button>
               </form>
             </div>

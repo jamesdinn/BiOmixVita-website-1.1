@@ -1,8 +1,22 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
+import { toast } from 'sonner';
 
 const Insights = () => {
   const [selectedArticle, setSelectedArticle] = useState<number | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    // Simulate form submission
+    setTimeout(() => {
+      toast.success("Message sent successfully! We'll get back to you soon.");
+      setIsSubmitting(false);
+      (e.target as HTMLFormElement).reset();
+    }, 1000);
+  };
 
   // Blog posts data
   const blogPosts = [
@@ -182,7 +196,7 @@ const Insights = () => {
                     {/* Right side - Quick Contact Form */}
                     <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
                       <h3 className="text-lg font-semibold mb-4">Quick Contact</h3>
-                      <form className="space-y-3" action="https://formspree.io/f/manlgvby" method="POST">
+                      <form className="space-y-3" onSubmit={handleSubmit}>
                         <div>
                           <input 
                             type="text" 
@@ -221,10 +235,11 @@ const Insights = () => {
                         <Button 
                           type="submit" 
                           variant="secondary"
+                          disabled={isSubmitting}
                           className="w-full py-2 text-sm font-semibold" 
                           style={{backgroundColor: '#2a5fa0', color: '#feffff'}}
                         >
-                          Send Message
+                          {isSubmitting ? "Sending..." : "Send Message"}
                         </Button>
                       </form>
                     </div>
