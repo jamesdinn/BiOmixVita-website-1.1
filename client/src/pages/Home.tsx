@@ -12,7 +12,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 text-center">
+              <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 text-center" style={{display: 'inline'}}>
                 OMICS & AI Solutions for Healthier & More Sustainable Futures
               </h1>
               <p className="text-xl text-gray-700 mb-8">
