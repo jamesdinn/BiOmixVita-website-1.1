@@ -246,10 +246,10 @@ const Insights = () => {
         <div className="relative mx-auto max-w-7xl px-6 py-24 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl drop-shadow-lg">
-              Insights
+              
             </h1>
-            <p className="mt-6 text-xl leading-8 text-white drop-shadow-lg" style={{fontSize: '29px', fontWeight: '800'}}>
-              Turning biological complexity into insight
+            <p className="mt-6 text-xl leading-8 text-white drop-shadow-lg" style={{fontSize: '50px', fontWeight: '800'}}>
+              Turning biological complexity into insights
             </p>
           </div>
         </div>
