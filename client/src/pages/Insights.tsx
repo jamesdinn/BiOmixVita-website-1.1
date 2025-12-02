@@ -241,13 +241,14 @@ const Insights = () => {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <div className="bg-primary text-white">
-        <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+      <div className="relative bg-cover bg-center text-white" style={{backgroundImage: 'url(/insights-hero-bg.jpg)'}}>
+        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="relative mx-auto max-w-7xl px-6 py-24 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl drop-shadow-lg">
               Insights
             </h1>
-            <p className="mt-6 text-xl leading-8 text-blue-100">
+            <p className="mt-6 text-xl leading-8 text-white drop-shadow-lg">
               Turning biological complexity into insight
             </p>
           </div>
