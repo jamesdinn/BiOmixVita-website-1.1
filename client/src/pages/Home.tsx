@@ -188,7 +188,7 @@ export default function Home() {
               </p>
               <Link href="/contact">
                 <a>
-                  <Button size="lg" className="w-full">
+                  <Button size="lg" className="w-full" style={{backgroundColor: '#2a5fa0'}}>
                     Let's Connect!
                   </Button>
                 </a>
