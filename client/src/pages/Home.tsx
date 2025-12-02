@@ -13,12 +13,27 @@ export default function Home() {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
-      toast.success("Message sent successfully! We'll get back to you soon.");
+    try {
+      const formData = new FormData(e.currentTarget);
+      const response = await fetch('https://formspree.io/f/manlgvby', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+      
+      if (response.ok) {
+        toast.success("Message sent successfully! We'll get back to you soon.");
+        (e.target as HTMLFormElement).reset();
+      } else {
+        toast.error("Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      toast.error("Failed to send message. Please try again.");
+    } finally {
       setIsSubmitting(false);
-      (e.target as HTMLFormElement).reset();
-    }, 1000);
+    }
   };
 
   return (
@@ -279,20 +294,25 @@ export default function Home() {
               <div>
                 <input 
                   type="text" 
+                  name="name"
                   placeholder="Your Name" 
+                  required
                   className="w-full px-4 py-3 rounded-lg bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-400"
                 />
               </div>
               <div>
                 <input 
                   type="email" 
+                  name="email"
                   placeholder="Email Address" 
+                  required
                   className="w-full px-4 py-3 rounded-lg bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-400"
                 />
               </div>
               <div>
                 <input 
                   type="tel" 
+                  name="phone"
                   placeholder="Phone Number" 
                   className="w-full px-4 py-3 rounded-lg bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-400"
                 />
@@ -300,7 +320,9 @@ export default function Home() {
               <div>
                 <textarea 
                   rows={4} 
+                  name="message"
                   placeholder="Tell us about your project..." 
+                  required
                   className="w-full px-4 py-3 rounded-lg bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-400 resize-none"
                 ></textarea>
               </div>
