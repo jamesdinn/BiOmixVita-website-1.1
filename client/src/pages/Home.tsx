@@ -223,7 +223,7 @@ export default function Home() {
                 </p>
                 <Link href="/insights">
                   <a>
-                    <Button variant="default">
+                    <Button variant="default" style={{backgroundColor: '#2a5fa0'}}>
                       Read Article <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </a>
