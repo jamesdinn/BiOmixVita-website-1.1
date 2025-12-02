@@ -45,7 +45,7 @@ const Insights = () => {
       content: {
         sections: [
           {
-            title: "Emergence of \"No-Code\" & \"AI-Driven Platforms\": Freedom or Limitation?",
+            title: "\"No-Code\" & \"AI-Driven Platforms\": Freedom or Limitation?",
             content: "The bioinformatics landscape is undergoing a profound transformation driven by the growing presence of artificial intelligence (AI) and no-code platforms. These technologies aim to democratize biological data analysis by providing intuitive interfaces and automated workflows that reduce the need for programming expertise. Platforms such as BiomiX, BIOMEX, Pluto Bio, and ROSALIND® exemplify this trend by enabling users to conduct multi-omics analyses, differential expression studies, and pathway exploration without requiring any coding skills (Iperi C et al., 2024; Federico T et al., 2020; Pluto Bio, 2024; ROSALIND, 2024).\n\nThese platforms streamline routine tasks, accelerate exploratory analyses, and reduce dependence on skilled bioinformaticians for coding and translating biological questions into machine-readable workflows. For example, a researcher may perform a transcriptome analysis and identify differentially expressed genes within minutes using a no-code tool. In contrast, relying on a skilled bioinformatician typically requires several days and comes at a significantly higher cost. A manual workflow involves environment setup, scripting, quality control, and iterative debugging, which makes the process slower and more expensive, though often far more customizable and biologically nuanced."
           },
           {
