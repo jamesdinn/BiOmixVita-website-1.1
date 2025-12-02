@@ -248,7 +248,7 @@ const Insights = () => {
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl drop-shadow-lg">
               Insights
             </h1>
-            <p className="mt-6 text-xl leading-8 text-white drop-shadow-lg">
+            <p className="mt-6 text-xl leading-8 text-white drop-shadow-lg" style={{fontSize: '29px', fontWeight: '800'}}>
               Turning biological complexity into insight
             </p>
           </div>
