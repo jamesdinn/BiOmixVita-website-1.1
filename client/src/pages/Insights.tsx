@@ -248,7 +248,7 @@ const Insights = () => {
               Insights
             </h1>
             <p className="mt-6 text-xl leading-8 text-blue-100">
-              Content written for data scientists, by data scientists
+              Turning biological complexity into insight
             </p>
           </div>
         </div>
