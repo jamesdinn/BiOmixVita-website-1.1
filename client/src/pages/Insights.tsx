@@ -159,7 +159,7 @@ const Insights = () => {
 
             {/* Let's Connect Section */}
             <div className="mt-16">
-              <section className="py-20 bg-primary text-white rounded-xl">
+              <section className="py-20 bg-primary text-white rounded-xl" style={{backgroundColor: '#7fa8b8'}}>
                 <div className="max-w-4xl mx-auto px-6">
                   <div className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-bold mb-4 tracking-wide">
