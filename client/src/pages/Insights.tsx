@@ -221,7 +221,7 @@ const Insights = () => {
                         <Button 
                           type="submit" 
                           variant="secondary"
-                          className="w-full py-2 text-sm font-semibold"
+                          className="w-full py-2 text-sm font-semibold" style={{backgroundColor: '#2a5fa0'}}
                         >
                           Send Message
                         </Button>
