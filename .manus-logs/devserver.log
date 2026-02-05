@@ -1,0 +1,12 @@
+[2026-01-30T08:11:54.300Z] Starting dev server with command: pnpm run dev
+[2026-01-30T08:11:55.204Z] 
+[2026-01-30T08:11:55.204Z] > biomix-v2@1.0.0 dev /home/ubuntu/biomix-v2
+[2026-01-30T08:11:55.205Z] > vite --host
+[2026-01-30T08:11:55.205Z] 
+[2026-01-30T08:11:55.820Z] 
+[2026-01-30T08:11:55.820Z] VITE v7.1.9  ready in 564 ms
+[2026-01-30T08:11:55.821Z] 
+[2026-01-30T08:11:55.821Z] ➜  Local:   http://localhost:3000/
+[2026-01-30T08:11:55.822Z] ➜  Network: http://169.254.0.21:3000/
+[2026-01-30T08:12:03.176Z] [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+[2026-01-30T09:36:39.678Z] 4:36:39 AM [vite] (client) page reload index.html
