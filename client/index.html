@@ -16,9 +16,6 @@
     <meta property="og:type" content="website" />
     <title>BiOmixVita - OMICS & AI solutions for healthier & more sustainable futures</title>
     
-    <!-- Cookiebot -->
-    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="0194d134-2936-764c-8b80-168875387813" data-blockingmode="auto" type="text/javascript"></script>
-    
     <!-- Google Analytics 4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-382391679"></script>
     <script>
@@ -30,9 +27,23 @@
   </head>
 
   <body>
-    <!-- Leadfeeder -->
-    <script> (function(ss,ex){ window.ldfdr=window.ldfdr||function(){(ldfdr._q=ldfdr._q||[]).push([].slice.call(arguments));}; (function(d,s){ fs=d.getElementsByTagName(s)[0]; function ce(src){ var cs=d.createElement(s); cs.src=src; cs.async=1; fs.parentNode.insertBefore(cs,fs); }; ce('https://sc.lfeeder.com/lftracker_v1_'+ss+(ex?'_'+ex:'')+'.js'); })(document,'script'); })('YEgkB8ld6XW8ep3Z'); </script>
-    
+    <!-- Leadfeeder B2B Tracking -->
+    <script>
+      (function(ss,ex){
+        window.ldfdr=window.ldfdr||function(){(ldfdr._q=ldfdr._q||[]).push([].slice.call(arguments));};
+        (function(d,s){
+          fs=d.getElementsByTagName(s)[0];
+          function ce(src){
+            var cs=d.createElement(s);
+            cs.src=src;
+            cs.async=1;
+            fs.parentNode.insertBefore(cs,fs);
+          };
+          ce('https://sc.lfeeder.com/lftracker_v1_'+ss+(ex?'_'+ex:'')+'.js');
+        })(document,'script');
+      })('YEgkB8ld6XW8ep3Z');
+    </script>
+
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
