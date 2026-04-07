@@ -73,6 +73,95 @@ const Insights = () => {
           "Liu Y, Shen R, Zhou L, Xiao Q, Yuan J, Li Y. A data-intelligence-intensive bioinformatics copilot system for large-scale omics research and scientific insights. Brief Bioinform. 2025 Jul 2;26(4)."
         ]
       }
+    },
+    {
+      id: 2,
+      title: "From Data to Decision: Scalable Biological Intelligence Powered by BiOmixVita",
+      keywords: ["OMICS", "Bioinformatics", "Biomarker Discovery", "Systems Biology", "AI Integration"],
+      date: "February 24, 2026",
+      author: "BiOmixVita Team",
+      readTime: "8 min read",
+      content: {
+        sections: [
+          {
+            title: "The Modern Bioinformatician: Shifting from Pipeline Execution to Strategic Integration",
+            content: "The role of the bioinformatician has fundamentally evolved. Historically, bioinformaticians were primarily tasked with executing pre-defined pipelines—running quality control, mapping reads, calling variants, and generating summary statistics. Today, this landscape has shifted dramatically. The modern bioinformatician is expected to be a strategist, capable of integrating fragmented OMICS datasets into coherent biological narratives that inform decision-making.\n\nThis transformation reflects a critical realization: raw data is not information, and information is not insight. The ability to transform multi-layer OMICS data into actionable biological intelligence has become the defining skill in precision medicine and biomarker discovery."
+          },
+          {
+            title: "Beyond the Buzzword: Redefining Real Multi-Omics Integration",
+            content: "\"Multi-omics\" has become a buzzword in modern biology, yet its true meaning is often misunderstood. Many studies claim to perform multi-omics analysis when they simply concatenate results from independent single-omics workflows. True multi-omics integration, however, requires a fundamentally different approach:\n\n**Horizontal Integration (Data Layer)**\nCombining complementary data types (genomics, transcriptomics, proteomics, metabolomics) to capture the full spectrum of biological information.\n\n**Vertical Integration (Biological Layer)**\nConnecting molecular observations across biological scales—from DNA variants to protein function to cellular phenotypes.\n\n**Temporal Integration (Dynamic Layer)**\nCapturing how biological systems evolve over time, enabling the identification of causal relationships rather than mere correlations.\n\nThis multi-dimensional approach reveals hidden biological patterns that single-omics analyses cannot detect, enabling more accurate biomarker discovery and improved patient stratification."
+          },
+          {
+            title: "The Integrated Systems Biology Framework: From RNA-Seq to Actionable Insights",
+            content: "A robust multi-omics framework requires several key components:\n\n**1. Data Harmonization & Quality Control**\nEnsuring consistency across diverse data types, platforms, and batches. This step is critical—poor quality control can introduce artifacts that propagate through downstream analyses.\n\n**2. Dimensionality Reduction & Feature Selection**\nIdentifying the most informative variables from thousands of potential features. Techniques such as principal component analysis (PCA), t-SNE, and machine learning-based feature selection help focus on biologically relevant signals.\n\n**3. Network & Pathway Analysis**\nMapping molecular interactions to reveal system-level organization. Protein-protein interaction networks, metabolic pathways, and signaling cascades provide biological context that isolated gene lists cannot.\n\n**4. Machine Learning for Biomarker Discovery**\nApplying supervised and unsupervised learning to identify predictive signatures. Ensemble methods, cross-validation, and rigorous statistical testing ensure robustness and generalizability.\n\n**5. Biological Validation & Interpretation**\nCritically evaluating findings against existing biological knowledge and experimental evidence. This human-expert step is irreplaceable—it ensures that computational results translate into meaningful biological insights.\n\nThe integration of these components creates a powerful analytical framework capable of uncovering complex disease mechanisms and identifying novel therapeutic targets."
+          },
+          {
+            title: "Case Study I: Variant-Driven Biomarker Discovery in Hereditary Breast and Ovarian Cancer (HBOC)",
+               content: `Hereditary breast and ovarian cancer (HBOC) is predominantly associated with mutations in BRCA1 and BRCA2 genes. However, approximately 20-30% of high-risk families do not carry pathogenic BRCA1/2 mutations, indicating that alternative genetic factors drive disease susceptibility in a significant proportion of patients who test negative for BRCA1/2 mutations. This highlights the need for alternative biomarker discovery strategies based on comprehensive genomic analysis.
+
+Using whole-exome sequencing (WES), a cohort of high-risk BRCA-negative patients was analyzed to identify novel candidate genes associated with cancer susceptibility. A rigorous bioinformatics pipeline was applied, including variant filtering, functional annotation, and pathogenicity prediction.
+
+**Key Findings**
+The analysis identified several candidate variants in genes involved in:
+- DNA repair pathways
+- Genome stability mechanisms
+- Cell cycle regulation
+
+Notably, variants in genes beyond BRCA1/2 revealed potential alternative drivers of cancer susceptibility, expanding the genetic landscape of HBOC.
+
+**Strategic Insight**
+This study demonstrates that:
+- Single-gene approaches are insufficient for complex diseases
+- Integrative genomic analysis can uncover hidden genetic risk factors
+- WES-based pipelines enable precision biomarker discovery
+
+**Impact:**
+This approach shifts HBOC from a BRCA-centric model toward a multi-gene, pathway-based understanding, enabling improved patient stratification and personalized risk assessment.
+
+![Figure 1: Interactome showing protein-protein interactions from exome sequencing data](https://files.manuscdn.com/user_upload_by_module/session_file/310419663032214796/HUBgOOsamscexwPI.png)
+*Figure 1: Interactome showing the protein–protein interactions deduced from the exome sequencing data. The size of the red dots is proportional to the number of times that the gene was identified in patients.*`
+          },
+          {
+            title: "Case Study II: Pathway-Based Biomarker Discovery in Autoimmune Thyroid Diseases (AITD)",
+                     content: `Autoimmune thyroid diseases (AITD), including Graves' disease and Hashimoto's thyroiditis, are complex disorders driven by both genetic and environmental factors. Traditional approaches often fail to identify consistent biomarkers due to genetic heterogeneity.
+
+To address this, a pathway-based enrichment strategy combined with whole-exome sequencing (WES) was applied to identify novel biomarkers associated with AITD.
+
+**Methodological Approach**
+- Variant filtering focused on rare and functionally relevant mutations
+- Pathway enrichment analysis was used to identify biologically coherent gene sets
+- Integration of genetic variants with functional pathways enabled system-level interpretation
+
+**Key Findings**
+The study revealed:
+- Enrichment of variants in DNA repair and immune-related pathways
+- Identification of candidate genes linked to oxidative stress and genomic stability
+- Evidence that disease mechanisms are driven by pathway-level dysregulation rather than single mutations
+
+**Strategic Insight**
+This study highlights that:
+- Pathway-based analysis outperforms gene-centric approaches
+- Complex diseases require systems biology frameworks
+
+**Impact:**
+This approach provides a foundation for precision diagnostics in AITD, supporting the development of predictive biomarkers and improved disease classification.
+
+![Figure 2: DNA Damage Driven (DDD) Network](https://files.manuscdn.com/user_upload_by_module/session_file/310419663032214796/TnMPgKYHsDFGvWlF.png)
+*Figure 2: DNA Damage Driven "DDD" network showing global network composition and filtered nodes with SIFT scores and dbSNP frequency filtering.*
+
+![Figure 3: DDD Network with Allele Frequency](https://files.manuscdn.com/user_upload_by_module/session_file/310419663032214796/gySRtueiJjUHYZsV.png)
+*Figure 3: DDD network representation with colors related to allele number according to WES results from 7 patients.*`
+          },
+          {
+            title: "Conclusion: Achieving Scalable Biological Intelligence",
+            content: "The future of precision medicine depends on transforming fragmented OMICS data into scalable biological intelligence. The limitation is no longer data generation, but its integration into predictive frameworks.\n\nAt BiOmixVita, we bridge the gap between data and decision-making by delivering:\n- Full biological context through multi-layer integration\n- Improved decision-making via system-level interpretation\n- Scalable analytical frameworks applicable across diseases\n\nIn the era of precision medicine, the bioinformatician as a strategist is essential. Integrative analysis is no longer optional, it is the foundation of meaningful biological discovery."
+          }
+        ],
+        references: [
+          "Ben Ayed-Guerfali D, Kifagi C, Ben Kridis-Rejeb W, Ammous-Boukhris N, Ayedi W, Khanfir A, Daoud J, Mokdad-Gargouri R. The Identification by Exome Sequencing of Candidate Genes in BRCA-Negative Tunisian Patients at High Risk of Hereditary Breast/Ovarian Cancer. Genes (Basel). 2022;13(8):1296.",
+          "Younsou RM, Moalla M, Kallel R, Kifagi C, Bougacha-Elleuch N, Ghorbel A, Ayadi H, Abid M, Mnif-Feki M, Kacem HH. Exploring New Biomarkers for Autoimmune Thyroid Diseases Through Whole Exome Sequencing and Pathway-Based Enrichment. In: ASET 2024 – Advances in Science and Engineering Technology International Conferences. IEEE; 2024."
+        ]
+      }
     }
   ];
 
@@ -88,7 +177,7 @@ const Insights = () => {
     return (
       <div className="bg-white">
         {/* Hero Section */}
-        <div className="relative overflow-hidden text-white" style={{backgroundImage: 'url(/ai-dna-background.png)', backgroundSize: 'cover', backgroundPosition: 'center'}}>
+        <div className="relative overflow-hidden text-white" style={{backgroundImage: 'url(https://files.manuscdn.com/user_upload_by_module/session_file/310419663032214796/gtLmWQLWnBdbQvTm.png)', backgroundSize: 'cover', backgroundPosition: 'center'}}>
           <div className="absolute inset-0 bg-black/40"></div>
           <div className="relative z-10 mx-auto max-w-4xl px-6 py-16 lg:px-8">
             <div className="text-center">
@@ -144,11 +233,15 @@ const Insights = () => {
                   className="text-gray-700 leading-relaxed text-lg space-y-4"
                   dangerouslySetInnerHTML={{
                     __html: section.content
+                      .replace(/\!\[(.*?)\]\((.*?)\)/g, '<div class="my-8 p-6 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg border-2 border-blue-200"><div class="text-center"><img src="$2" alt="$1" class="mx-auto max-w-full h-auto rounded-lg" style="max-height: 500px;" /></div></div>')
+                      .replace(/\*\[(.*?)\]\((.*?)\)/g, '<p class="text-sm text-blue-600 font-medium text-center mt-2">$1</p>')
                       .replace(/\*\*(.*?)\*\*/g, '<strong class="font-bold text-gray-900">$1</strong>')
                       .replace(/\n\n/g, '</p><p class="mb-4">')
                       .replace(/^(.*)$/gm, '<p class="mb-4">$1</p>')
                       .replace(/• /g, '• ')
                       .replace(/Figure 1:/g, '<strong class="font-bold text-blue-800">Figure 1:</strong>')
+                      .replace(/Figure 2:/g, '<strong class="font-bold text-blue-800">Figure 2:</strong>')
+                      .replace(/Figure 3:/g, '<strong class="font-bold text-blue-800">Figure 3:</strong>')
                   }}
                 />
                 {/* Show Figure 1 after the BiOmixVita section */}

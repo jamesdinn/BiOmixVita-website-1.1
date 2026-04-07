@@ -241,7 +241,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="rounded-lg shadow-lg relative overflow-hidden" style={{backgroundImage: 'url(/ai-dna-background.png)', backgroundSize: 'cover', backgroundPosition: 'center'}}>
+          <div className="rounded-lg shadow-lg relative overflow-hidden" style={{backgroundImage: 'url(https://files.manuscdn.com/user_upload_by_module/session_file/310419663032214796/gtLmWQLWnBdbQvTm.png)', backgroundSize: 'cover', backgroundPosition: 'center'}}>
             <div className="absolute inset-0 bg-black/40"></div>
             <div className="relative z-10 p-8 flex flex-col md:flex-row gap-6 items-center">
               <div className="flex-1">
