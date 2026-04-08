@@ -24,6 +24,7 @@ function Router() {
           <Route path={"/services"} component={Services} />
           <Route path={"/about"} component={AboutUs} />
           <Route path={"/insights"} component={Insights} />
+          <Route path={"/insights/:id"} component={Insights} />
           <Route path={"/pricing"} component={Pricing} />
           <Route path={"/partners"} component={Partners} />
           <Route path={"/contact"} component={Contact} />

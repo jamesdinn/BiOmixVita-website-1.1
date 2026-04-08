@@ -1,12 +1,9 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { toast } from 'sonner';
-import { useRoute, useLocation } from 'wouter';
 
 const Insights = () => {
-  const [match, params] = useRoute('/insights/:id');
-  const [, navigate] = useLocation();
-  const selectedArticleId = match ? parseInt(params.id) : null;
+  const [selectedArticle, setSelectedArticle] = useState<number | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -88,15 +85,15 @@ const Insights = () => {
         sections: [
           {
             title: "The Modern Bioinformatician: Shifting from Pipeline Execution to Strategic Integration",
-            content: "The role of the bioinformatician has fundamentally evolved. Historically, bioinformaticians were primarily tasked with executing pre-defined pipelines, running quality control, mapping reads, calling variants, and generating summary statistics. Today, this landscape has shifted dramatically. The modern bioinformatician is expected to be a strategist, capable of integrating fragmented OMICS datasets into coherent biological narratives that inform decision-making.\n\nThis transformation reflects a critical realization: raw data is not information, and information is not insight. The ability to transform multi-layer OMICS data into actionable biological intelligence has become the defining skill in precision medicine and biomarker discovery."
+            content: "The role of the bioinformatician has fundamentally evolved. Historically, bioinformaticians were primarily tasked with executing pre-defined pipelines—running quality control, mapping reads, calling variants, and generating summary statistics. Today, this landscape has shifted dramatically. The modern bioinformatician is expected to be a strategist, capable of integrating fragmented OMICS datasets into coherent biological narratives that inform decision-making.\n\nThis transformation reflects a critical realization: raw data is not information, and information is not insight. The ability to transform multi-layer OMICS data into actionable biological intelligence has become the defining skill in precision medicine and biomarker discovery."
           },
           {
             title: "Beyond the Buzzword: Redefining Real Multi-Omics Integration",
-            content: "\"Multi-omics\" has become a buzzword in modern biology, yet its true meaning is often misunderstood. Many studies claim to perform multi-omics analysis when they simply concatenate results from independent single-omics workflows. True multi-omics integration, however, requires a fundamentally different approach:\n\n**Horizontal Integration (Data Layer)**\nCombining complementary data types (genomics, transcriptomics, proteomics, metabolomics) to capture the full spectrum of biological information.\n\n**Vertical Integration (Biological Layer)**\nConnecting molecular observations across biological scales, from DNA variants to protein function to cellular phenotypes.\n\n**Temporal Integration (Dynamic Layer)**\nCapturing how biological systems evolve over time, enabling the identification of causal relationships rather than mere correlations.\n\nThis multi-dimensional approach reveals hidden biological patterns that single-omics analyses cannot detect, enabling more accurate biomarker discovery and improved patient stratification."
+            content: "\"Multi-omics\" has become a buzzword in modern biology, yet its true meaning is often misunderstood. Many studies claim to perform multi-omics analysis when they simply concatenate results from independent single-omics workflows. True multi-omics integration, however, requires a fundamentally different approach:\n\n**Horizontal Integration (Data Layer)**\nCombining complementary data types (genomics, transcriptomics, proteomics, metabolomics) to capture the full spectrum of biological information.\n\n**Vertical Integration (Biological Layer)**\nConnecting molecular observations across biological scales—from DNA variants to protein function to cellular phenotypes.\n\n**Temporal Integration (Dynamic Layer)**\nCapturing how biological systems evolve over time, enabling the identification of causal relationships rather than mere correlations.\n\nThis multi-dimensional approach reveals hidden biological patterns that single-omics analyses cannot detect, enabling more accurate biomarker discovery and improved patient stratification."
           },
           {
             title: "The Integrated Systems Biology Framework: From RNA-Seq to Actionable Insights",
-            content: "A robust multi-omics framework requires several key components:\n\n**1. Data Harmonization & Quality Control**\nEnsuring consistency across diverse data types, platforms, and batches. This step is critical—poor quality control can introduce artifacts that propagate through downstream analyses.\n\n**2. Dimensionality Reduction & Feature Selection**\nIdentifying the most informative variables from thousands of potential features. Techniques such as principal component analysis (PCA), t-SNE, and machine learning-based feature selection help focus on biologically relevant signals.\n\n**3. Network & Pathway Analysis**\nMapping molecular interactions to reveal system-level organization. Protein-protein interaction networks, metabolic pathways, and signaling cascades provide biological context that isolated gene lists cannot.\n\n**4. Machine Learning for Biomarker Discovery**\nApplying supervised and unsupervised learning to identify predictive signatures. Ensemble methods, cross-validation, and rigorous statistical testing ensure robustness and generalizability.\n\n**5. Biological Validation & Interpretation**\nCritically evaluating findings against existing biological knowledge and experimental evidence. This human-expert step is irreplaceable, it ensures that computational results translate into meaningful biological insights.\n\nThe integration of these components creates a powerful analytical framework capable of uncovering complex disease mechanisms and identifying novel therapeutic targets."
+            content: "A robust multi-omics framework requires several key components:\n\n**1. Data Harmonization & Quality Control**\nEnsuring consistency across diverse data types, platforms, and batches. This step is critical—poor quality control can introduce artifacts that propagate through downstream analyses.\n\n**2. Dimensionality Reduction & Feature Selection**\nIdentifying the most informative variables from thousands of potential features. Techniques such as principal component analysis (PCA), t-SNE, and machine learning-based feature selection help focus on biologically relevant signals.\n\n**3. Network & Pathway Analysis**\nMapping molecular interactions to reveal system-level organization. Protein-protein interaction networks, metabolic pathways, and signaling cascades provide biological context that isolated gene lists cannot.\n\n**4. Machine Learning for Biomarker Discovery**\nApplying supervised and unsupervised learning to identify predictive signatures. Ensemble methods, cross-validation, and rigorous statistical testing ensure robustness and generalizability.\n\n**5. Biological Validation & Interpretation**\nCritically evaluating findings against existing biological knowledge and experimental evidence. This human-expert step is irreplaceable—it ensures that computational results translate into meaningful biological insights.\n\nThe integration of these components creates a powerful analytical framework capable of uncovering complex disease mechanisms and identifying novel therapeutic targets."
           },
           {
             title: "Case Study I: Variant-Driven Biomarker Discovery in Hereditary Breast and Ovarian Cancer (HBOC)",
@@ -121,7 +118,7 @@ This study demonstrates that:
 **Impact:**
 This approach shifts HBOC from a BRCA-centric model toward a multi-gene, pathway-based understanding, enabling improved patient stratification and personalized risk assessment.
 
-![](https://files.manuscdn.com/user_upload_by_module/session_file/310419663032214796/HUBgOOsamscexwPI.png)
+![Figure 1: Interactome showing protein-protein interactions from exome sequencing data](https://files.manuscdn.com/user_upload_by_module/session_file/310419663032214796/HUBgOOsamscexwPI.png)
 *Figure 1: Interactome showing the protein–protein interactions deduced from the exome sequencing data.*`
           },
           {
@@ -149,11 +146,11 @@ This study highlights that:
 **Impact:**
 This approach provides a foundation for precision diagnostics in AITD, supporting the development of predictive biomarkers and improved disease classification.
 
-![](https://files.manuscdn.com/user_upload_by_module/session_file/310419663032214796/TnMPgKYHsDFGvWlF.png)
-*Fig. 2. DNA Damage Driven "DDD" network. (a) The global DDD network composed by 78 genes (b) Only 25 nodes of genes with SIFT score (identified with variant(s) affecting the protein sequence) are represented (c) Only 25 nodes of genes with dbSNP frequency < 0.05 score are represented (d) Same (b) and (c) network is represented with colors related to the allele number according to the WES result (7 patients).*
+![Figure 2: DNA Damage Driven (DDD) Network](https://files.manuscdn.com/user_upload_by_module/session_file/310419663032214796/TnMPgKYHsDFGvWlF.png)
+*Figure 2: Interactome showing the protein–protein interactions deduced from the exome sequencing data.*
 
-![](https://files.manuscdn.com/user_upload_by_module/session_file/310419663032214796/gySRtueiJjUHYZsV.png)
-*Figure 3: Interactome showing the protein–protein interactions deduced from the exome sequencing data.*`
+![Figure 3: DDD Network with Allele Frequency](https://files.manuscdn.com/user_upload_by_module/session_file/310419663032214796/gySRtueiJjUHYZsV.png)
+*Fig. 3. DNA Damage Driven "DDD" network. (a) The global DDD network composed by 78 genes (b) Only 25 nodes of genes with SIFT score (identified with variant(s) affecting the protein sequence) are represented (c) Only 25 nodes of genes with dbSNP frequency < 0.05 score are represented (d) Same (b) and (c) network is represented with colors related to the allele number according to the WES result (7 patients).*`
           },
           {
             title: "Conclusion: Achieving Scalable Biological Intelligence",
@@ -174,8 +171,8 @@ This approach provides a foundation for precision diagnostics in AITD, supportin
     window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}&text=${text}`, '_blank');
   };
 
-  if (selectedArticleId) {
-    const article = blogPosts.find(post => post.id === selectedArticleId);
+  if (selectedArticle) {
+    const article = blogPosts.find(post => post.id === selectedArticle);
     if (!article) return null;
     return (
       <div className="bg-white">
@@ -185,7 +182,7 @@ This approach provides a foundation for precision diagnostics in AITD, supportin
           <div className="relative z-10 mx-auto max-w-4xl px-6 py-16 lg:px-8">
             <div className="text-center">
               <button 
-                onClick={() => navigate('/insights')}
+                onClick={() => setSelectedArticle(null)}
                 className="mb-4 text-blue-200 hover:text-white text-sm flex items-center mx-auto transition-colors"
               >
                 ← Back to Insights
@@ -236,9 +233,8 @@ This approach provides a foundation for precision diagnostics in AITD, supportin
                   className="text-gray-700 leading-relaxed text-lg space-y-4"
                   dangerouslySetInnerHTML={{
                     __html: section.content
-                      .replace(/!\[(.*?)\]\((.*?)\)\n\*(.*?)\*/g, '<div class="my-8 p-6 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg border-2 border-blue-200"><div class="text-center"><img src="$2" alt="$1" class="mx-auto max-w-full h-auto rounded-lg" style="max-height: 500px;" /></div><p class="text-sm text-gray-800 font-medium text-center mt-4">$3</p></div>')
-                      .replace(/!\[Figure [0-9]:.*?\]\((.*?)\)/g, '')
-
+                      .replace(/\!\[(.*?)\]\((.*?)\)/g, '<div class="my-8 p-6 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg border-2 border-blue-200"><div class="text-center"><img src="$2" alt="$1" class="mx-auto max-w-full h-auto rounded-lg" style="max-height: 500px;" /></div></div>')
+                      .replace(/\*\[(.*?)\]\((.*?)\)/g, '<p class="text-sm text-blue-600 font-medium text-center mt-2">$1</p>')
                       .replace(/\*\*(.*?)\*\*/g, '<strong class="font-bold text-gray-900">$1</strong>')
                       .replace(/\n\n/g, '</p><p class="mb-4">')
                       .replace(/^(.*)$/gm, '<p class="mb-4">$1</p>')
@@ -246,7 +242,6 @@ This approach provides a foundation for precision diagnostics in AITD, supportin
                       .replace(/Figure 1:/g, '<strong class="font-bold text-blue-800">Figure 1:</strong>')
                       .replace(/Figure 2:/g, '<strong class="font-bold text-blue-800">Figure 2:</strong>')
                       .replace(/Figure 3:/g, '<strong class="font-bold text-blue-800">Figure 3:</strong>')
-   
                   }}
                 />
                 {/* Show Figure 1 after the BiOmixVita section */}
@@ -404,7 +399,7 @@ This approach provides a foundation for precision diagnostics in AITD, supportin
               <div className="px-4 pb-4">
                 <h3 
                   className="text-xl font-bold text-gray-900 cursor-pointer hover:text-blue-600 transition-colors"
-                  onClick={() => navigate(`/insights/${post.id}`)}
+                  onClick={() => setSelectedArticle(post.id)}
                 >
                   {post.title}
                 </h3>
