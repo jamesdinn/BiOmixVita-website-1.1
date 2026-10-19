@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { toast } from 'sonner';
 import { useRoute, useLocation } from 'wouter';
+import RnaSeqInsight from './RnaSeqInsight';
 
 const Insights = () => {
   const [match, params] = useRoute('/insights/:id');
@@ -165,6 +166,15 @@ This approach provides a foundation for precision diagnostics in AITD, supportin
           "Younsou RM, Moalla M, Kallel R, Kifagi C, Bougacha-Elleuch N, Ghorbel A, Ayadi H, Abid M, Mnif-Feki M, Kacem HH. Exploring New Biomarkers for Autoimmune Thyroid Diseases Through Whole Exome Sequencing and Pathway-Based Enrichment. In: ASET 2024 – Advances in Science and Engineering Technology International Conferences. IEEE; 2024."
         ]
       }
+    },
+    {
+      id: 3,
+      title: "From RNA-seq Data to Biological Insight: Data-Informed. Biology-Driven.",
+      keywords: ["RNA-seq", "Transcriptomics", "Bioinformatics", "Pathway Analysis", "Reproducibility"],
+      date: "October 2026",
+      author: "BiOmixVita Team",
+      readTime: "12 min read",
+      content: { sections: [], references: [] }
     }
   ];
 
@@ -175,6 +185,7 @@ This approach provides a foundation for precision diagnostics in AITD, supportin
   };
 
   if (selectedArticleId) {
+    if (selectedArticleId === 3) return <RnaSeqInsight />;
     const article = blogPosts.find(post => post.id === selectedArticleId);
     if (!article) return null;
     return (

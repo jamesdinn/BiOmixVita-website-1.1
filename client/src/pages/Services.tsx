@@ -361,9 +361,20 @@ const Services = () => {
                 {expandedCategory === key && (
                   <div className="px-6 pb-4 space-y-2 bg-white rounded-b-lg">
                     {category.services.map((service, index) => (
-                      <div key={index} className="text-base text-gray-700 pl-4 py-1">
-                        • {service}
-                      </div>
+                      service === "Bulk RNA-seq" ? (
+                        <Link key={index} href="/services/bulk-rna-seq">
+                          <a
+                            onClick={() => setShowOmicsModal(false)}
+                            className="block rounded-md px-4 py-2 text-base font-semibold text-[#4169E1] transition-colors hover:bg-blue-50 hover:text-blue-800"
+                          >
+                            • {service} <span className="ml-1 text-sm">→</span>
+                          </a>
+                        </Link>
+                      ) : (
+                        <div key={index} className="text-base text-gray-700 pl-4 py-1">
+                          • {service}
+                        </div>
+                      )
                     ))}
                   </div>
                 )}

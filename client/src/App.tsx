@@ -13,6 +13,7 @@ import Insights from "./pages/Insights";
 import Pricing from "./pages/Pricing";
 import Partners from "./pages/Partners";
 import Contact from "./pages/Contact";
+import RnaSeqService from "./pages/RnaSeqService";
 
 function Router() {
   return (
@@ -22,6 +23,7 @@ function Router() {
         <Switch>
           <Route path={"/"} component={Home} />
           <Route path={"/services"} component={Services} />
+          <Route path={"/services/bulk-rna-seq"} component={RnaSeqService} />
           <Route path={"/about"} component={AboutUs} />
           <Route path={"/insights"} component={Insights} />
           <Route path={"/insights/:id"} component={Insights} />
