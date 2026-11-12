@@ -34,7 +34,7 @@ export default function RnaSeqService() {
   };
 
   return (
-    <div className="bg-white">
+    <div className="bg-white rna-service-editorial">
       <section className="bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
           <div className="grid items-center gap-12 lg:grid-cols-2">
@@ -79,17 +79,17 @@ export default function RnaSeqService() {
           </div>
 
           <div className="mt-14 grid items-center gap-10 lg:grid-cols-2">
-            <div><img src="/rnaseq/pca.png" alt="PCA showing global sample structure" className={figureClass} /><p className="mt-3 text-center text-sm italic text-gray-500">Stage and genotype are made visible together!</p></div>
+            <div className="rna-service-figure"><img src="/rnaseq/pca.png" alt="PCA showing global sample structure" className={figureClass} /><p className="mt-3 text-center text-sm italic text-gray-500">Stage and genotype are made visible together!</p></div>
             <div><p className="text-sm font-semibold uppercase tracking-wide text-blue-700">01 · Explore gene expression patterns</p><h3 className="mt-2 text-2xl font-bold text-gray-900">How do the samples relate globally?</h3><p className="mt-4 leading-7 text-gray-600">Before testing individual genes, we establish whether the data reflect the experimental design. PCA, correlation views, and heatmaps reveal replicate consistency, group structure, outliers, and possible sources of unwanted variation.</p><p className="mt-4 leading-7 text-gray-600">PC1, PC2, PC3, and subsequent components are reviewed, and the most informative combinations are selected for the clearest group clustering and biologically meaningful visualization.</p><div className="mt-5 rounded-lg border-l-4 border-yellow-400 bg-yellow-50 p-4 text-gray-700">BiOmixVita exploratory analysis selects the component views that best expose structure between groups.</div></div>
           </div>
 
           <div className="mt-20 grid items-center gap-10 lg:grid-cols-2">
-            <div className="lg:order-2"><img src="/rnaseq/heatmap.png" alt="Heatmap showing coordinated expression blocks" className={figureClass} /><p className="mt-3 text-center text-sm italic text-gray-500">Clusters become defined, named, and testable expression programs!</p></div>
+            <div className="rna-service-figure lg:order-2"><img src="/rnaseq/heatmap.png" alt="Heatmap showing coordinated expression blocks" className={figureClass} /><p className="mt-3 text-center text-sm italic text-gray-500">Clusters become defined, named, and testable expression programs!</p></div>
             <div className="lg:order-1"><p className="text-sm font-semibold uppercase tracking-wide text-blue-700">02 · Resolve coordinated expression programs</p><h3 className="mt-2 text-2xl font-bold text-gray-900">Which genes move together?</h3><p className="mt-4 leading-7 text-gray-600">Genes rarely act alone. Clustering and heatmap analysis identify groups of genes that move together across samples, helping separate shared biological programs from condition-specific responses.</p><p className="mt-4 leading-7 text-gray-600">BiOmixVita tunes clustering to the design, annotates the resulting programs, and labels representative driver genes so the pattern becomes a testable hypothesis.</p><div className="mt-5 rounded-lg border-l-4 border-yellow-400 bg-yellow-50 p-4 text-gray-700">The output turns a high-dimensional expression matrix into interpretable blocks linked to the experimental question.</div></div>
           </div>
 
           <div className="mt-20 grid items-center gap-10 lg:grid-cols-2">
-            <div><img src="/rnaseq/kegg1.png" alt="KEGG pathway visualization" className={figureClass} /><p className="mt-3 text-center text-sm italic text-gray-500">Affected pathway views help translate molecular changes into the next biological question!</p></div>
+            <div className="rna-service-figure"><img src="/rnaseq/kegg1.png" alt="KEGG pathway visualization" className={figureClass} /><p className="mt-3 text-center text-sm italic text-gray-500">Affected pathway views help translate molecular changes into the next biological question!</p></div>
             <div><p className="text-sm font-semibold uppercase tracking-wide text-blue-700">03 · Visualize mechanisms and regulatory context</p><h3 className="mt-2 text-2xl font-bold text-gray-900">Which pathways may explain the observed phenotype?</h3><p className="mt-4 leading-7 text-gray-600">When the question moves beyond enrichment, pathway maps and interaction networks show where genes connect, which modules are active, and which regulatory relationships may explain the observed phenotype.</p><p className="mt-4 leading-7 text-gray-600">BiOmixVita can adapt KEGG pathway views to the tissue and comparison, overlaying gene-level changes so the biological mechanism becomes easier to inspect and communicate.</p><p className="mt-5 rounded-lg border border-yellow-200 bg-yellow-50 p-4 text-sm leading-6 text-yellow-900">Illustrative example from a published course analysis. It is not derived from, and is not related to, any analysis project performed by the BiOmixVita team.</p></div>
           </div>
         </div>

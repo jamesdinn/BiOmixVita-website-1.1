@@ -123,13 +123,11 @@ export default function Pricing() {
               Contact us to discuss your project requirements and receive a customized quote 
               tailored to your specific needs.
             </p>
-            <Link href="/contact">
-              <a>
-                <Button size="lg">
-                  Let's Connect
-                </Button>
-              </a>
-            </Link>
+            <a href="https://calendly.com/chamseddine-kifagi/biomixvita-let-s-connect" target="_blank" rel="noopener noreferrer">
+              <Button size="lg">
+                Book a call
+              </Button>
+            </a>
           </div>
         </div>
       </section>

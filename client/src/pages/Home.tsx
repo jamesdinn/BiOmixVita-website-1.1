@@ -217,13 +217,11 @@ export default function Home() {
                 Whether you already have OMICS data, plan to generate raw data, or are simply 
                 curious to learn more about our solutions, there is one answer:
               </p>
-              <Link href="/contact">
-                <a>
-                  <Button size="lg" className="w-full" style={{backgroundColor: '#2a5fa0'}}>
-                    Let's Connect!
-                  </Button>
-                </a>
-              </Link>
+              <a href="https://calendly.com/chamseddine-kifagi/biomixvita-let-s-connect" target="_blank" rel="noopener noreferrer">
+                <Button size="lg" className="w-full" style={{backgroundColor: '#2a5fa0'}}>
+                  Book a call
+                </Button>
+              </a>
             </div>
           </div>
         </div>
@@ -272,68 +270,21 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Let's Connect Section */}
+      {/* Book a call section */}
       <section className="py-20 bg-[#7FA8B8] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Let's Connect
-            </h2>
-            <h3 className="text-2xl md:text-3xl font-semibold mb-4">
               Ready to Transform Your Research?
-            </h3>
-            <p className="text-lg text-white/90 max-w-3xl mx-auto">
-              Get in touch for a free initial consultation and discover how our OMICS & AI solutions can revolutionize your projects and accelerate your research outcomes.
+            </h2>
+            <p className="text-lg text-white/90 max-w-3xl mx-auto mb-8">
+              Book a focused conversation about your OMICS data, biological question, and next research decision.
             </p>
-          </div>
-          
-          {/* Quick Contact Form */}
-          <div className="max-w-3xl mx-auto bg-white/10 backdrop-blur-sm rounded-lg p-8">
-            <h4 className="text-xl font-semibold mb-6 text-white">Quick Contact</h4>
-            <form className="space-y-4" onSubmit={handleSubmit}>
-              <div>
-                <input 
-                  type="text" 
-                  name="name"
-                  placeholder="Your Name" 
-                  required
-                  className="w-full px-4 py-3 rounded-lg bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-400"
-                />
-              </div>
-              <div>
-                <input 
-                  type="email" 
-                  name="email"
-                  placeholder="Email Address" 
-                  required
-                  className="w-full px-4 py-3 rounded-lg bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-400"
-                />
-              </div>
-              <div>
-                <input 
-                  type="tel" 
-                  name="phone"
-                  placeholder="Phone Number" 
-                  className="w-full px-4 py-3 rounded-lg bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-400"
-                />
-              </div>
-              <div>
-                <textarea 
-                  rows={4} 
-                  name="message"
-                  placeholder="Tell us about your project..." 
-                  required
-                  className="w-full px-4 py-3 rounded-lg bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-400 resize-none"
-                ></textarea>
-              </div>
-              <button 
-                type="submit" 
-                disabled={isSubmitting}
-                className="w-full py-3 px-6 bg-[#367cc1] hover:bg-[#2a5fa0] text-white font-semibold rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                {isSubmitting ? "Sending..." : "Send Message"}
-              </button>
-            </form>
+            <a href="https://calendly.com/chamseddine-kifagi/biomixvita-let-s-connect" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="px-10" style={{backgroundColor: '#2a5fa0'}}>
+                Book a call
+              </Button>
+            </a>
           </div>
         </div>
       </section>

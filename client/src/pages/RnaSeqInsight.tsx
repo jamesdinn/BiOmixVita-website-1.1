@@ -17,7 +17,7 @@ const refs = [
 ];
 
 const Figure = ({ src, alt, caption }: { src: string; alt: string; caption: string }) => (
-  <div className="my-8 rounded-lg border-2 border-blue-200 bg-gradient-to-br from-blue-50 to-indigo-50 p-6">
+  <div className="rna-figure my-12 rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 to-indigo-50 p-6 shadow-sm sm:p-8">
     <div className="rounded-lg bg-white p-4 shadow-inner"><img src={src} alt={alt} className="mx-auto max-h-[520px] w-full rounded-lg object-contain" /></div>
     <p className="mt-4 text-center text-sm font-medium text-blue-700">{caption}</p>
   </div>
@@ -55,7 +55,7 @@ export default function RnaSeqInsight() {
       </div></div>
     </div>
 
-    <div className="mx-auto max-w-4xl px-6 py-12 lg:px-8"><div className="prose prose-lg prose-blue mx-auto max-w-none">
+    <div className="mx-auto max-w-4xl px-6 py-16 lg:px-8 lg:py-20"><div className="rna-editorial prose prose-lg prose-blue mx-auto max-w-none">
       <p className="text-2xl font-semibold leading-9 text-gray-700 sm:text-3xl">A complete analysis should answer the biological question, not only produce plots.</p>
       <p>RNA-seq can reveal how expression changes across tissues, treatments, developmental stages, genotypes, or disease states. BiOmixVita connects the statistical result to the biological context needed to decide what to investigate next.</p>
       <p>RNA-seq analysis often produces several familiar visualizations, but each one answers a different question. PCA plots reveal global sample structure. Heatmaps show coordinated expression patterns across genes and samples. Volcano plots bring together the magnitude of change and statistical significance to highlight genes that are both strongly changed and well supported by the data.</p>
@@ -120,7 +120,15 @@ export default function RnaSeqInsight() {
 
       <div className="mt-16 border-t-2 border-gray-200 pt-8"><h2 className="text-3xl font-bold text-gray-900">References</h2><div className="mt-6 space-y-3 text-sm text-gray-600">{refs.map((r,i) => <p key={i} className="border-l-2 border-blue-200 pl-4 leading-relaxed">[{i+1}] {r}</p>)}</div></div>
 
-      <div className="mt-16"><section className="rounded-xl bg-[#7fa8b8] py-16 text-white"><div className="mx-auto max-w-4xl px-6"><div className="mb-12 text-center"><h2 className="text-4xl font-bold tracking-wide">Let's Connect</h2></div><div className="grid items-start gap-12 lg:grid-cols-2"><div><h3 className="text-2xl font-semibold">Ready to Transform Your Research?</h3><p className="mt-6 text-lg opacity-90">Get in touch for a free initial consultation and discover how our OMICS & AI solutions can revolutionize your projects and accelerate your research outcomes.</p></div><div className="rounded-lg border border-white/20 bg-white/10 p-6 backdrop-blur-sm"><h3 className="mb-4 text-lg font-semibold">Quick Contact</h3><form className="space-y-3" onSubmit={handleSubmit}><input type="text" name="name" placeholder="Your Name" required className="w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900" /><input type="email" name="email" placeholder="Email Address" required className="w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900" /><textarea rows={3} name="message" placeholder="Tell us about your project..." required className="w-full resize-none rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900" /><Button type="submit" disabled={isSubmitting} className="w-full bg-[#2a5fa0] text-white hover:bg-blue-800">{isSubmitting ? 'Sending...' : 'Send Message'}</Button></form></div></div></div></section></div>
+      <div className="mt-16">
+        <section className="rounded-xl bg-[#7fa8b8] py-16 text-white">
+          <div className="mx-auto max-w-4xl px-6 text-center">
+            <h2 className="text-4xl font-bold tracking-wide">Ready to Transform Your Research?</h2>
+            <p className="mx-auto mt-6 max-w-2xl text-lg opacity-90">Book a focused conversation about your RNA-seq project, biological question, and next research decision.</p>
+            <a href="https://calendly.com/chamseddine-kifagi/biomixvita-let-s-connect" target="_blank" rel="noopener noreferrer" className="mt-8 inline-flex rounded-lg bg-[#2a5fa0] px-7 py-3 font-semibold text-white hover:bg-blue-800">Book a call</a>
+          </div>
+        </section>
+      </div>
     </div></div>
   </div>;
 }

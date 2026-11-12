@@ -62,7 +62,7 @@ const Insights = () => {
           },
           {
             title: "Conclusion",
-            content: "The future of bioinformatics lies in a balanced, hybrid model that merges AI-based automation with the irreplaceable human ability to interpret, contextualize, and ethically evaluate biological data. While no-code and AI-driven platforms expand access and accelerate workflows, they cannot, and should not, replace expert judgment.\n\nAt BiOmixVita, our official language is **\"Biology.\"** Through our hybrid approach, we combine the power of automation with expert scientific insight to deliver customized, reliable, and actionable bioinformatics solutions.\n\nBeyond offering solutions for OMICS technologies, we have established an efficient and exciting proof of concept for OMICS integration using Network- & AI-based strategies.\n\nWhether you already have OMICS data, plan to generate raw data, or are simply curious to learn more about our solutions, there is one answer: **Let's connect!**"
+            content: "The future of bioinformatics lies in a balanced, hybrid model that merges AI-based automation with the irreplaceable human ability to interpret, contextualize, and ethically evaluate biological data. While no-code and AI-driven platforms expand access and accelerate workflows, they cannot, and should not, replace expert judgment.\n\nAt BiOmixVita, our official language is **\"Biology.\"** Through our hybrid approach, we combine the power of automation with expert scientific insight to deliver customized, reliable, and actionable bioinformatics solutions.\n\nBeyond offering solutions for OMICS technologies, we have established an efficient and exciting proof of concept for OMICS integration using Network- & AI-based strategies.\n\nWhether you already have OMICS data, plan to generate raw data, or are simply curious to learn more about our solutions, there is one answer: **Book a call**"
           }
         ],
         references: [
@@ -295,79 +295,13 @@ This approach provides a foundation for precision diagnostics in AITD, supportin
               </div>
             )}
 
-            {/* Let's Connect Section */}
+            {/* Book a call section */}
             <div className="mt-16">
-              <section className="py-20 bg-primary text-white rounded-xl" style={{backgroundColor: '#7fa8b8'}}>
-                <div className="max-w-4xl mx-auto px-6">
-                  <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-bold mb-4 tracking-wide">
-                      Let's Connect
-                    </h2>
-                  </div>
-                  
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-                    {/* Left side - Contact Information */}
-                    <div className="space-y-8">
-                      <div>
-                        <h3 className="text-2xl font-semibold mb-6">Ready to Transform Your Research?</h3>
-                        <p className="text-lg opacity-90 mb-8">
-                          Get in touch for a free initial consultation and discover how our OMICS & AI solutions 
-                          can revolutionize your projects and accelerate your research outcomes.
-                        </p>
-                      </div>
-                    </div>
-                    
-                    {/* Right side - Quick Contact Form */}
-                    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                      <h3 className="text-lg font-semibold mb-4">Quick Contact</h3>
-                      <form className="space-y-3" onSubmit={handleSubmit}>
-                        <div>
-                          <input 
-                            type="text" 
-                            name="name"
-                            placeholder="Your Name" 
-                            required
-                            className="w-full px-3 py-2 rounded-lg bg-white border border-gray-300 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent text-sm"
-                          />
-                        </div>
-                        <div>
-                          <input 
-                            type="email" 
-                            name="email"
-                            placeholder="Email Address" 
-                            required
-                            className="w-full px-3 py-2 rounded-lg bg-white border border-gray-300 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent text-sm"
-                          />
-                        </div>
-                        <div>
-                          <input 
-                            type="tel" 
-                            name="phone"
-                            placeholder="Phone Number" 
-                            className="w-full px-3 py-2 rounded-lg bg-white border border-gray-300 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent text-sm"
-                          />
-                        </div>
-                        <div>
-                          <textarea 
-                            rows={3} 
-                            name="message"
-                            placeholder="Tell us about your project..." 
-                            required
-                            className="w-full px-3 py-2 rounded-lg bg-white border border-gray-300 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent resize-none text-sm"
-                          ></textarea>
-                        </div>
-                        <Button 
-                          type="submit" 
-                          variant="secondary"
-                          disabled={isSubmitting}
-                          className="w-full py-2 text-sm font-semibold" 
-                          style={{backgroundColor: '#2a5fa0', color: '#feffff'}}
-                        >
-                          {isSubmitting ? "Sending..." : "Send Message"}
-                        </Button>
-                      </form>
-                    </div>
-                  </div>
+              <section className="rounded-xl bg-[#7fa8b8] py-16 text-white">
+                <div className="mx-auto max-w-4xl px-6 text-center">
+                  <h2 className="text-4xl font-bold tracking-wide">Ready to Transform Your Research?</h2>
+                  <p className="mx-auto mt-6 max-w-2xl text-lg opacity-90">Book a focused conversation about your OMICS data, biological question, and next research decision.</p>
+                  <a href="https://calendly.com/chamseddine-kifagi/biomixvita-let-s-connect" target="_blank" rel="noopener noreferrer" className="mt-8 inline-flex rounded-lg bg-[#2a5fa0] px-7 py-3 font-semibold text-white hover:bg-blue-800">Book a call</a>
                 </div>
               </section>
             </div>

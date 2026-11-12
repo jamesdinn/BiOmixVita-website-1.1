@@ -256,11 +256,13 @@ const AboutUs = () => {
           <p className="text-xl text-blue-100 mb-6">
             Let's discuss how BiOmixVita can help accelerate your research and unlock new insights from your biological data.
           </p>
-          <a 
-            href="/contact" 
+          <a
+            href="https://calendly.com/chamseddine-kifagi/biomixvita-let-s-connect"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
           >
-            Get in Touch
+            Book a call
           </a>
         </div>
       </div>
